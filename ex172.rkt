@@ -10,6 +10,11 @@
 ;interpetation: the strings should be seperated by blank space ("") and the lines should be seperated with a newline ("\n")
 ;(define (collapse file)
 
-;(write-file "ttt.dat" (read-file "ttt.txt"))
+;list-of-string -> string
+;transfer list-of-string to string 
+(define (ls-stirng ls)
+  (cond
+    [(empty? ls) ""]
+    [else (first ls) (rset ls)]
 
- (read-words/line "ttt.txt")
+(check-expect (ls-string (list "Hello" "Hi")) ("Hello Hi"))
