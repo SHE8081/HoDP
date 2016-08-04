@@ -33,4 +33,10 @@
 ;List-of-X->X
 (define (fold2 l f)
   (cond
-    [(empty? l) ]
+    [(empty? l) (default l) ]
+    [else
+     (f (first l) (fold2 (rest l)))]))
+
+
+(define (default l)
+  (
